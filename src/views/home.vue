@@ -35,7 +35,7 @@
             </div>
         </div>
     </div>
-    <footers />
+    <footers @click="clear" />
 </template>
 
 <script lang="ts">
@@ -96,6 +96,14 @@
                         methods.upDateList()
                     }
                 },
+                clear(){
+                    if(confirm('Do you want to clear all lists?')){
+                        state.list = []
+                        methods.upDateList()
+                    }else{
+                        alert('Welcome next time! love,you')
+                    }
+                }
             }
             return {
                 ...toRefs(state),
