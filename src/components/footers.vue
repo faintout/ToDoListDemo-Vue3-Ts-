@@ -1,6 +1,9 @@
 <template>
-    <div class="footers">Copyright © 2014 faintout.github.io  <span @click="clear">clear</span></div>
-
+    <div class="footers">
+        <div>Copyright © 2014 faintout.github.io </div>
+        
+        <div @click="clear" class="footer_clear">&nbsp;clear</div>
+    </div>
 </template>
 
 <script lang="ts">
@@ -9,8 +12,8 @@
         name: 'footers',
         components: {},
         setup(props, context) {
-            const methods= {
-                clear(){
+            const methods = {
+                clear() {
                     context.emit('clear')
                 }
             }
@@ -25,8 +28,14 @@
         color: #666;
         font-size: 14px;
         text-align: center;
-        span{
+
+        .footer_clear {
             color: #999;
+            cursor: pointer;
         }
+        div{
+            display: inline-block;
+        }
+
     }
 </style>
