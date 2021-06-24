@@ -5,14 +5,14 @@ const routes = [
  {
     path: '/',
     name:'index',
-    // redirect:'/home'
+    redirect:'/home'
+    // component: home
+ },
+ {
+    path: '/home',
+    name:'home',
     component: home
  },
-//  {
-//     path: '/home',
-//     name:'home',
-//     component: home
-//  },
 ]
 const router = createRouter({
   history: createWebHistory(),
