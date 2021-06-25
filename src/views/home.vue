@@ -1,5 +1,5 @@
 <template>
-    <headers @addText=addText />
+    <Headers @addText=addText />
     <div class="content">
         <div class="body">
             <h2>
@@ -35,7 +35,7 @@
             </div>
         </div>
     </div>
-    <footers @click="clear" />
+    <Footers @click="clear" />
 </template>
 
 <script lang="ts">
@@ -52,8 +52,8 @@
     export default defineComponent({
         name: 'home',
         components: {
-            headers: header,
-            footers: footer
+            Headers: header,
+            Footers: footer
         },
         directives: {
             focus: {
@@ -113,94 +113,5 @@
     })
 </script>
 <style lang="less">
-    .content {
-        width: 100%;
-        height: calc(100% - 50px);
-        width: 600px;
-        margin: 0 auto;
-    }
-
-    .body h2 {
-        margin: 0.82em 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        span {
-            // position: absolute;
-            position: relative;
-            top: -3px;
-            right: 5px;
-            display: inline-block;
-            padding: 0 5px;
-            height: 20px;
-            border-radius: 20px;
-            background: #E6E6FA;
-            line-height: 22px;
-            text-align: center;
-            color: #666;
-            font-size: 14px;
-        }
-    }
-    ._gray_border_left{
-            border-left: 5px solid #999 !important;
-            opacity: 0.5;
-    }
-    .listItem {
-        height: 32px;
-        line-height: 32px;
-        background: #fff;
-        position: relative;
-        margin-bottom: 10px;
-        padding: 0 45px;
-        border-radius: 3px;
-        border-left: 5px solid #629A9C;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 7%);
-
-        >input {
-            position: absolute;
-            top: 5px;
-            left: 14px;
-            width: 22px;
-            height: 22px;
-            cursor: pointer;
-        }
-    }
-
-    ._flex_space_between {
-        display: flex;
-        justify-content: space-between;
-
-        div {
-            width: 80%;
-        }
-
-        input {
-            top: 3px;
-            left: 40px;
-            width: 100%;
-            height: 20px;
-            line-height: 14px;
-            text-indent: 5px;
-            font-size: 14px;
-        }
-    }
-
-    ._del_style {
-        position: relative;
-        top: 2px;
-        right: -40px;
-        display: inline-block;
-        width: 14px;
-        height: 12px;
-        border-radius: 14px;
-        border: 6px double #FFF;
-        background: #CCC;
-        line-height: 14px;
-        text-align: center;
-        color: #FFF;
-        font-weight: bold;
-        font-size: 14px;
-        cursor: pointer;
-    }
+     @import url('../assets/style/content.less');
 </style>

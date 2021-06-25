@@ -24,18 +24,5 @@
     })
 </script>
 <style lang="less">
-    .footers {
-        color: #666;
-        font-size: 14px;
-        text-align: center;
-
-        .footer_clear {
-            color: #999;
-            cursor: pointer;
-        }
-        div{
-            display: inline-block;
-        }
-
-    }
+    @import url('../assets/style/footers.less');
 </style>
